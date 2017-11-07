@@ -15,6 +15,27 @@ Pretty simple with [Composer](http://packagist.org), run:
 composer require pvanag/avefile-bundle
 ```
 
+OR add cofiguration to composer.json:
+
+```json
+"repositories": [
+    {
+        "type": "vcs",
+        "url":  "https://github.com/pvanag/AVEFileBundle"
+    }
+],
+"require": {
+    "pvanag/avefile-bundle": "dev-master",
+    <...>
+```
+
+### Import configuration to config.yml
+
+```yaml
+- { resource: "@AVEFileBundle/Resources/config/services.yml" }
+```
+
+
 ### Add AVEFileBundle to your application kernel
 
 ```php
@@ -32,5 +53,5 @@ public function registerBundles()
 ## Usage:
 
 ```sh
-./app/console ave:file:list
+./bin/console ave:file:list
 ```
