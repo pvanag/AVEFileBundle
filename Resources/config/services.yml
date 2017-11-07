@@ -1,0 +1,3 @@
+services:
+    avefilebundle.facade.filefacade:
+        class: AVEFileBundle\Facade\FileFacade
